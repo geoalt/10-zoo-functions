@@ -8,5 +8,5 @@ function getSpeciesByIds(...ids) {
     .filter((specie) => specie.id === id))
     .flat();
 }
-console.log(getSpeciesByIds('533bebf3-6bbe-41d8-9cdf-46f7d13b62ae'))
+console.log(getSpeciesByIds('533bebf3-6bbe-41d8-9cdf-46f7d13b62ae'));
 module.exports = getSpeciesByIds;
