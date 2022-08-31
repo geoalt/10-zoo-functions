@@ -11,13 +11,12 @@ const getFirstAnimal = (employeeId) => {
 function getOldestFromFirstSpecies(id) {
   // seu código aqui
   const specieId = getFirstAnimal(id);
-  const oldestAnimal = species.find((specie) => specie.id === specieId)
-    .residents
-    .reduce((acc, curr) =>
-      (acc.age > curr.age ? acc : curr));
+  const oldestAnimal = species.find((specie) => specie.id === specieId);
 
-  return Object.values(oldestAnimal);
+  return oldestAnimal
+    && Object.values(oldestAnimal.residents
+      .reduce((acc, curr) => (acc.age > curr.age ? acc : curr)));
 }
 
-// console.log(getOldestFromFirstSpecies('c5b83cb3-a451-49e2-ac45-ff3f54fbe7e1'));
+console.log(getOldestFromFirstSpecies('c5b83cb3-a451-49e2-ac45-ff3f54fbe7e1'));
 module.exports = getOldestFromFirstSpecies;
