@@ -10,8 +10,6 @@ const getEmployee = (obj) => {
     || employee.lastName === name);
   const searchById = employees.find((employee) => employee.id === id);
 
-  console.log(searchById, searchByName);
-
   if (!searchById && !searchByName) {
     throw new Error('Informações inválidas');
   }
